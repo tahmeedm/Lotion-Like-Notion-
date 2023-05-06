@@ -1,0 +1,296 @@
+/*FILE: ./index.css */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+body {
+  background-color: #333;
+  color: #c8a2c8;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+/*DONE: Header: */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #c8a2c8;
+  padding: 10px;
+}
+
+@keyframes rainbow {
+  0% { color: #ff3333; }  
+  20% { color: #ff9933; } 
+  40% { color: #f3ef00; }
+  60% { color: #c8a2c8; } 
+  80% { color: #b700ff; }  
+  100% { color: #ff3333; } 
+  }
+
+  @keyframes rainbow2 {
+    0% { background-color: #ff3333; }  
+    50% { background-color: #f3ef00; }  
+    100% { background-color: #ff3333; } 
+  }
+  
+  
+  .header-left {
+  flex: 1;
+  padding-left: 5px;
+  animation: rainbow 15s linear infinite;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10px;
+    }
+
+
+
+.header-button {
+  background-color: #c8a2c8; /* light purple color */
+  color: #333; 
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Merriweather', serif;  /* futuristic font */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.deleteButton {
+  background-color: #c8a2c8; /* light purple color */
+  animation: rainbow2 15s linear infinite;
+  color: #333; 
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Merriweather', serif;  /* futuristic font */
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.header-button:hover {
+  animation: pulse 1.5s infinite;
+}
+
+.deleteButton:hover {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
+
+
+/* DONE: footer */
+footer {
+  background-color: #d2d6de; /* light blue-gray */
+  color: #393e46; /* dark gray */
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px;
+  filter: invert(0%);
+  transition: filter 1s ease, background-color 1s ease, color 1s ease; /* added transition property */
+  border: 3px solid #393e46; /* dark gray */
+  border-radius: 10px; /* round corners */
+  margin-top: 20px; /* add space */
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: fixed; /* position footer */
+  bottom: 0; /* align to bottom */
+  left: 0; /* align to left */
+  right: 0; /* align to right */
+}
+
+footer a {
+  color: #00adb5; /* light blue */
+  transition: color 1s ease;
+}
+
+footer a:hover {
+  color: #393e46; /* dark gray */
+}
+
+footer:hover {
+  background-color: #00adb5; /* light blue */
+  color: #393e46; /* dark gray */
+}
+
+footer:hover a {
+  color: #d2d6de; /* light blue-gray */
+  transition: color 1s ease;
+}
+
+footer:before {
+  content: '\1F6E0'; /* 🛠️ hammer and wrench emoji */
+  margin-right: 10px;
+}
+
+footer:after {
+  content: '\1F680'; /* 🚀 rocket emoji */
+  margin-left: 10px;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: rgb(59, 59, 59);
+  border-radius: 10px;
+  padding: 20px;
+  width: 500px;
+  height: 500px;
+}
+
+.popup h2 {
+  color: black;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.popup form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.popup label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.popup input[type='text'] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.popup button:not([type='submit']) {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  background-color: #da6555;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.popup button:not([type='submit']):hover {
+  background-color: #d32a14;
+}
+
+.obituary-container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  
+}
+.obituary-content {
+  font-size: 16px;
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.obituary-card {
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #c8a2c8;
+  text-align: center;
+}
+
+.obituary-text {
+  font-size: 16px;
+  text-align: justify;
+  color: #c8a2c8;
+}
+
+.play-speech {
+  background-color: #c8a2c8;
+  color: #333;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Merriweather', serif;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.play-speech:hover {
+  background-color: #b57ec5;
+}
